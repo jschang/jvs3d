@@ -1,0 +1,53 @@
+#ifndef __JVSLIB_TYPES__
+#define __JVSLIB_TYPES__
+
+// turn debug on
+#define JVS_DEBUG			1
+
+// error types
+enum {
+	JVSERR = 234550001,
+	JVSERR_NOFILE,
+	JVSERR_MEMALLOC,
+	JVSERR_EOF,
+	JVSERR_PARSE
+};
+
+// class types
+enum {
+	JVS_CT_BASECLASS = 240160000,
+	JVS_CT_TEXTPARSER };
+
+// 3d class types
+enum {
+	JVS3D_CT_OBJECT = 240600000 };
+
+#define JVS_NEWLINE 235219999
+#define JVS_SPACE 235219998
+
+// operator types
+enum {
+	JVS_OP_START = 235220000, 
+	JVS_OP_OPAR,
+	JVS_OP_CPAR,
+	JVS_OP_OBRACE,
+	JVS_OP_CBRACE,
+	JVS_OP_OBRACK,
+	JVS_OP_CBRACK,
+//	JVS_OP_LT,
+//	JVS_OP_GT,
+	JVS_OP_SEMICOLON,
+	JVS_OP_COMMA,
+//	JVS_OP_ASTERICK,
+//	JVS_OP_FSLASH,
+//	JVS_OP_BSLASH,
+//	JVS_OP_PIPE,
+//	JVS_OP_PLUS,
+//	JVS_OP_MINUS,
+//	JVS_OP_EXCLAIM,
+//	JVS_OP_EQUAL,
+//	JVS_OP_TILDA,
+	JVS_OP_END,
+	JVS_OP_LENGTH = (JVS_OP_END-JVS_OP_START-1) };
+
+#endif // __JVSLIB_TYPES__
